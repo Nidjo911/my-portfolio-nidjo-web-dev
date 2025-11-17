@@ -3,43 +3,27 @@ document.addEventListener('DOMContentLoaded', function() {
     const sidenav = document.querySelectorAll('.sidenav');
     M.Sidenav.init(sidenav);
 
-    // Initialize slider
-    const slider = document.querySelectorAll('.slider');
-    M.Slider.init(slider, {
-        indicators: true,
-        height: 500,
-        interval: 5000
-    });
-
-    // Initialize material boxed (for gallery images)
-    const materialboxed = document.querySelectorAll('.materialboxed');
-    M.Materialbox.init(materialboxed);
-
-    // Initialize scrollspy for smooth scrolling
+    // Initialize scrollspy for section highlighting
     const scrollspy = document.querySelectorAll('.scrollspy');
     M.ScrollSpy.init(scrollspy, {
         scrollOffset: 60
     });
 
-    // Add animation on scroll
-    const campCards = document.querySelectorAll('.card');
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
+    // Show/hide scroll indicator based on viewport size
+    function updateScrollIndicator() {
+        const scrollIndicator = document.querySelector('.scroll-indicator');
+        if (window.innerWidth >= 992) { // Medium screens and up
+            scrollIndicator.style.display = 'block';
+        } else {
+            scrollIndicator.style.display = 'none';
+        }
+    }
 
-    const observer = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    campCards.forEach(card => {
-        observer.observe(card);
-    });
+    // Initial check
+    updateScrollIndicator();
+    
+    // Update on resize
+    window.addEventListener('resize', updateScrollIndicator);
 });
 
 // Add smooth scrolling for navigation links
