@@ -1,197 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio | Professional Profile</title>
+    <title>Nidjo | Dev</title>
     <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
     <!-- Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Google Fonts - Orbitron -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Orbitron', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+        }
+    </style>
 </head>
+
 <body>
     <!-- Navbar -->
-    <nav class="nav-wrapper" style="background-color: #333738 !important;">
-        <div class="container">
-            <a href="#" class="brand-logo" style="display: flex; align-items: center;">
-                <img src="favicon.ico" alt="Logo" style="height: 40px; margin-right: 10px;">
+    <nav id="main-navbar" class="nav-wrapper" style="background-color: #333738 !important; padding: 0 20px;">
+        <div class="container" style="display: flex; justify-content: center;">
+            <a href="#" class="brand-logo" style="text-align: center; text-transform: uppercase; letter-spacing: 2px; transform: none; left: 0; right: 0; margin: 0 auto; position: relative;">
                 My Portfolio
             </a>
-            <a href="#" class="sidenav-trigger" data-target="mobile-menu">
-                <i class="material-icons">menu</i>
-            </a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-            </ul>
         </div>
     </nav>
 
-    <!-- Mobile Side Navigation -->
-    <ul class="sidenav" id="mobile-menu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-    </ul>
-
     <!-- Main Content Section -->
-    <section id="home" class="section" style="min-height: calc(100vh - 128px); display: flex; align-items: center; padding: 0;">
+    <section id="home" class="section"
+        style="min-height: calc(100vh - 128px - 200px); padding: 0;">
         <div class="container" style="width: 100%;">
-            <div class="row valign-wrapper" style="margin: 0; height: 100%;">
+            <div class="row" style="margin: 0; height: 100%;">
                 <!-- Left Column - Fixed -->
-                <div class="col s12 m5" style="height: 100%;">
-                    <div class="center-align" style="padding: 2rem; position: sticky; top: 0; height: 100%; display: flex; flex-direction: column; justify-content: center;">
-                        <h2 style="color: #333738; margin-bottom: 1.5rem;">Hi, I'm Nikola</h2>
-                        <h5 class="light" style="color: #635b6c; margin-bottom: 2rem;">Digital Marketing & Branding Specialist</h5>
-                        <p>I'm a passionate marketing professional with expertise in digital branding, content strategy, and social media management. With [X] years of experience in the industry, I help businesses establish a strong online presence and connect with their target audience.</p>
-                        <p>My approach combines creative thinking with data-driven strategies to deliver measurable results. I believe in creating authentic brand stories that resonate with people and drive engagement.</p>
-                        <div class="section" style="margin-top: auto; padding-bottom: 2rem; position: relative;">
-                            <a href="#contact" class="btn btn-large waves-effect waves-light" style="background-color: #b18742; margin: 0.5rem;">Get in Touch</a>
-                            <div style="position: absolute; right: -40px; bottom: 20px; display: none;" class="hide-on-small-only">
-                                <div style="display: flex; flex-direction: column; align-items: center;">
-                                    <span style="color: #b18742; font-size: 0.9rem; margin-bottom: 5px; writing-mode: vertical-rl; transform: rotate(180deg);">Scroll</span>
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(90deg);">
-                                        <path d="M9 5L16 12L9 19" stroke="#b18742" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
+                <div id="left-column" class="col s12 m5" style="height: 100%;">
+                    <div class=""
+                        style="padding: 2rem; position: sticky; top: 0; display: flex; flex-direction: column; padding-top: 2rem;">
+                        <p style="color: #333738; margin: 0 0 0.5rem 0; text-align: left; width: 100%; font-size: 1.1rem;">Hi, my nickname is:</p>
+                        <h1 style="margin: 0 0 0.8rem 0; line-height: 1.2;">Nidjo</h1>
+                        <p></p>
+                        <h5 id="description-text" class="light" style="color: #635b6c; margin: 0 0 1.5rem 0; font-size: 1.2rem; line-height: 1.4;">I am a professional Automotive Testing Engineer</h5>
+                        <p style="line-height: 1.6;">I'm passionate about learning Web Development and building application logic! I am currently working on my Django web application. More info to be provided soon.</p>
                     </div>
                 </div>
-                
+
                 <!-- Right Column - Scrollable Content -->
-                <div id="right-column" class="col s12 m7" style="height: calc(100vh - 128px); max-height: 100vh; overflow-y: auto; padding: 0 2rem 2rem; border-left: 1px solid rgba(0,0,0,0.1); box-sizing: border-box; -webkit-overflow-scrolling: touch; position: relative; order: 2;">
+                <div id="right-column" class="col s12 m7"
+                    style="height: calc(100vh - 128px); max-height: 100vh; overflow-y: auto; padding: 0 2rem 2rem; border-left: 1px solid rgba(0,0,0,0.1); box-sizing: border-box; -webkit-overflow-scrolling: touch; position: relative; order: 2;">
                     <!-- Scroll Indicator -->
-                    <div style="position: absolute; top: 1rem; left: 50%; transform: translateX(-50%); z-index: 1; background: rgba(255,255,255,0.8); padding: 0.5rem 1rem; border-radius: 20px; display: flex; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <div
+                        style="position: absolute; top: 1rem; left: 50%; transform: translateX(-50%); z-index: 1; background: rgba(255,255,255,0.8); padding: 0.5rem 1rem; border-radius: 20px; display: flex; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
                         <span style="color: #b18742; margin-right: 8px; font-size: 0.9rem;">Scroll down</span>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 9L12 16L5 9" stroke="#b18742" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19 9L12 16L5 9" stroke="#b18742" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
                         </svg>
                     </div>
                     <!-- Profile Image -->
-                    <div class="card" style="margin: 2rem 0; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                        <div class="card-image">
-                            <img src="https://picsum.photos/800/600?random=1" alt="Professional Background" class="responsive-img" style="display: block;">
+                    <div class="card"
+                        style="margin: 2rem 0; border-radius: 8px; overflow: hidden; box-shadow: none; background: transparent; height: auto; display: inline-block; width: 100%;">
+                        <div class="card-image" style="line-height: 0;">
+                            <img src="https://picsum.photos/800/600?random=1" alt="Professional Background"
+                                class="responsive-img" style="display: block;">
                         </div>
                     </div>
 
                     <!-- Skills Section -->
-                    <section class="section scrollspy" id="skills" style="background-color: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; border: 1px solid #b4b5be;">
-                        <h4 class="center" style="color: #333738; margin-bottom: 2rem;">My Skills</h4>
-                        <div class="row" style="margin-bottom: 0;">
-                            <div class="col s12 m4" style="margin-bottom: 1.5rem;">
-                                <div class="card" style="height: 100%; margin: 0; border: 1px solid #b4b5be; border-radius: 4px; overflow: hidden;">
-                                    <div class="card-content" style="padding: 1.5rem;">
-                                        <span class="card-title" style="color: #333738; font-size: 1.2rem; font-weight: 500; margin-bottom: 1rem; display: block;">Digital Marketing</span>
-                                        <p style="color: #333738; margin-bottom: 1.5rem; font-size: 0.9rem;">Comprehensive digital marketing strategies including SEO, PPC, email marketing, and conversion optimization.</p>
-                                        <div class="progress" style="margin: 1rem 0 0; background-color: #e0e0e0; border-radius: 2px; height: 6px;">
-                                            <div class="determinate" style="width: 90%; background-color: #b18742; border-radius: 2px;"></div>
-                                        </div>
-                                        <div style="text-align: right; color: #b18742; font-size: 0.8rem; margin-top: 0.25rem;">90%</div>
-                                    </div>
-                                </div>
+                    <section class="section scrollspy" id="skills"
+                        style="background-color: #f8f9fa; padding: 2rem; border-radius: 8px; margin: 1.5rem 0; border: 1px solid #b4b5be;">
+                        <h4 class="center" style="color: #333738; margin-bottom: 2rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;">Technical Skills</h4>
+                        <div
+                            style="display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 1rem; width: 100%;">
+                            <div
+                                style="background: white; padding: 1.5rem; border-radius: 8px; text-align: center; border: 1px solid #b4b5be; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(180, 181, 190, 0.1);">
+                                <i class="fab fa-html5"
+                                    style="font-size: 2.5rem; color: #e34f26; margin-bottom: 1rem;"></i>
+                                <div style="font-weight: 600; color: #333738; font-size: 1.1rem; letter-spacing: 0.5px;">HTML5</div>
                             </div>
-                            <div class="col s12 m4" style="margin-bottom: 1.5rem;">
-                                <div class="card" style="height: 100%; margin: 0; border: 1px solid #b4b5be; border-radius: 4px; overflow: hidden;">
-                                    <div class="card-content" style="padding: 1.5rem;">
-                                        <span class="card-title" style="color: #333738; font-size: 1.2rem; font-weight: 500; margin-bottom: 1rem; display: block;">Brand Strategy</span>
-                                        <p style="color: #333738; margin-bottom: 1.5rem; font-size: 0.9rem;">Developing unique brand identities and positioning strategies that stand out in competitive markets.</p>
-                                        <div class="progress" style="margin: 1rem 0 0; background-color: #e0e0e0; border-radius: 2px; height: 6px;">
-                                            <div class="determinate" style="width: 85%; background-color: #b18742; border-radius: 2px;"></div>
-                                        </div>
-                                        <div style="text-align: right; color: #b18742; font-size: 0.8rem; margin-top: 0.25rem;">85%</div>
-                                    </div>
-                                </div>
+                            <div
+                                style="background: white; padding: 1.5rem; border-radius: 8px; text-align: center; border: 1px solid #b4b5be; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(180, 181, 190, 0.1);">
+                                <i class="fab fa-css3-alt"
+                                    style="font-size: 2.5rem; color: #264de4; margin-bottom: 1rem;"></i>
+                                <div style="font-weight: 600; color: #333738; font-size: 1.1rem; letter-spacing: 0.5px;">CSS3</div>
                             </div>
-                            <div class="col s12 m4" style="margin-bottom: 1.5rem;">
-                                <div class="card" style="height: 100%; margin: 0; border: 1px solid #b4b5be; border-radius: 4px; overflow: hidden;">
-                                    <div class="card-content" style="padding: 1.5rem;">
-                                        <span class="card-title" style="color: #333738; font-size: 1.2rem; font-weight: 500; margin-bottom: 1rem; display: block;">Content Creation</span>
-                                        <p style="color: #333738; margin-bottom: 1.5rem; font-size: 0.9rem;">Compelling content development across multiple platforms to engage and grow your audience.</p>
-                                        <div class="progress" style="margin: 1rem 0 0; background-color: #e0e0e0; border-radius: 2px; height: 6px;">
-                                            <div class="determinate" style="width: 88%; background-color: #b18742; border-radius: 2px;"></div>
-                                        </div>
-                                        <div style="text-align: right; color: #b18742; font-size: 0.8rem; margin-top: 0.25rem;">88%</div>
-                                    </div>
-                                </div>
+                            <div
+                                style="background: white; padding: 1.5rem; border-radius: 8px; text-align: center; border: 1px solid #b4b5be; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(180, 181, 190, 0.1);">
+                                <i class="fab fa-js"
+                                    style="font-size: 2.5rem; color: #f7df1e; margin-bottom: 1rem;"></i>
+                                <div style="font-weight: 600; color: #333738; font-size: 1.1rem; letter-spacing: 0.5px;">JavaScript</div>
+                            </div>
+                            <div
+                                style="background: white; padding: 1.5rem; border-radius: 8px; text-align: center; border: 1px solid #b4b5be; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(180, 181, 190, 0.1);">
+                                <i class="fab fa-react"
+                                    style="font-size: 2.5rem; color: #61dafb; margin-bottom: 1rem;"></i>
+                                <div style="font-weight: 600; color: #333738; font-size: 1.1rem; letter-spacing: 0.5px;">React</div>
+                            </div>
+                            <div
+                                style="background: white; padding: 1.5rem; border-radius: 8px; text-align: center; border: 1px solid #b4b5be; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(180, 181, 190, 0.1);">
+                                <i class="fab fa-python"
+                                    style="font-size: 2.5rem; color: #3776ab; margin-bottom: 1rem;"></i>
+                                <div style="font-weight: 600; color: #333738; font-size: 1.1rem; letter-spacing: 0.5px;">Python</div>
+                            </div>
+                            <div
+                                style="background: white; padding: 1.5rem; border-radius: 8px; text-align: center; border: 1px solid #b4b5be; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(180, 181, 190, 0.1);">
+                                <i class="fas fa-bolt"
+                                    style="font-size: 2.5rem; color: #092e20; margin-bottom: 1rem;"></i>
+                                <div style="font-weight: 600; color: #333738; font-size: 1.1rem; letter-spacing: 0.5px;">Django</div>
                             </div>
                         </div>
                     </section>
 
-                    <!-- Projects Section -->
-                    <section class="section scrollspy" id="projects">
-                        <h4 class="center">Featured Projects</h4>
-                        <div class="row">
-                            <div class="col s12 m6">
-                                <div class="card">
-                                    <div class="card-image">
-                                        <img src="https://picsum.photos/600/400?random=21" alt="Project 1">
-                                        <span class="card-title" style="background: rgba(51, 55, 56, 0.8); width: 100%; padding: 10px;">Brand Campaign</span>
-                                    </div>
-                                    <div class="card-content">
-                                        <p>Comprehensive rebranding strategy for a leading tech startup, resulting in 150% increase in brand recognition.</p>
-                                    </div>
-                                </div>
+                    <!-- Additional Skills Section -->
+                    <section class="section scrollspy" id="additional-skills"
+                        style="background-color: #f8f9fa; padding: 2rem; border-radius: 8px; margin: 1.5rem 0; border: 1px solid #b4b5be;">
+                        <h4 class="center" style="color: #b18742; margin-bottom: 2rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;">Additional Skills</h4>
+                        <div
+                            style="display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 1rem; width: 100%;">
+                            <div
+                                style="background: white; padding: 1.5rem; border-radius: 8px; text-align: center; border: 1px solid #b4b5be; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(180, 181, 190, 0.1);">
+                                <i class="fab fa-git-alt"
+                                    style="font-size: 2.5rem; color: #f34f29; margin-bottom: 1rem;"></i>
+                                <div style="font-weight: 600; color: #333738; font-size: 1.1rem; letter-spacing: 0.5px;">Git</div>
                             </div>
-                            <div class="col s12 m6">
-                                <div class="card">
-                                    <div class="card-image">
-                                        <img src="https://picsum.photos/600/400?random=22" alt="Project 2">
-                                        <span class="card-title" style="background: rgba(51, 55, 56, 0.8); width: 100%; padding: 10px;">Social Media Strategy</span>
-                                    </div>
-                                    <div class="card-content">
-                                        <p>Developed and executed a social media campaign that grew engagement by 200% across all platforms.</p>
-                                    </div>
-                                </div>
+                            <div
+                                style="background: white; padding: 1.5rem; border-radius: 8px; text-align: center; border: 1px solid #b4b5be; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(180, 181, 190, 0.1);">
+                                <i class="fab fa-node-js"
+                                    style="font-size: 2.5rem; color: #68a063; margin-bottom: 1rem;"></i>
+                                <div style="font-weight: 600; color: #333738; font-size: 1.1rem; letter-spacing: 0.5px;">Node.js</div>
                             </div>
-                            <div class="col s12 m6">
-                                <div class="card">
-                                    <div class="card-image">
-                                        <img src="https://picsum.photos/600/400?random=23" alt="Project 3">
-                                        <span class="card-title" style="background: rgba(51, 55, 56, 0.8); width: 100%; padding: 10px;">Content Marketing</span>
-                                    </div>
-                                    <div class="card-content">
-                                        <p>Created a content marketing strategy that increased organic traffic by 175% within six months.</p>
-                                    </div>
-                                </div>
+                            <div
+                                style="background: white; padding: 1.5rem; border-radius: 8px; text-align: center; border: 1px solid #b4b5be; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(180, 181, 190, 0.1);">
+                                <i class="fas fa-database"
+                                    style="font-size: 2.5rem; color: #336791; margin-bottom: 1rem;"></i>
+                                <div style="font-weight: 600; color: #333738; font-size: 1.1rem; letter-spacing: 0.5px;">SQL</div>
+                            </div>
+                            <div
+                                style="background: white; padding: 1.5rem; border-radius: 8px; text-align: center; border: 1px solid #b4b5be; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(180, 181, 190, 0.1);">
+                                <i class="fab fa-aws"
+                                    style="font-size: 2.5rem; color: #ff9900; margin-bottom: 1rem;"></i>
+                                <div style="font-weight: 600; color: #333738; font-size: 1.1rem; letter-spacing: 0.5px;">AWS</div>
+                            </div>
+                            <div
+                                style="background: white; padding: 1.5rem; border-radius: 8px; text-align: center; border: 1px solid #b4b5be; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(180, 181, 190, 0.1);">
+                                <i class="fab fa-docker"
+                                    style="font-size: 2.5rem; color: #2496ed; margin-bottom: 1rem;"></i>
+                                <div style="font-weight: 600; color: #333738; font-size: 1.1rem; letter-spacing: 0.5px;">Docker</div>
+                            </div>
+                            <div
+                                style="background: white; padding: 1.5rem; border-radius: 8px; text-align: center; border: 1px solid #b4b5be; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(180, 181, 190, 0.1);">
+                                <i class="fas fa-cogs"
+                                    style="font-size: 2.5rem; color: #635b6c; margin-bottom: 1rem;"></i>
+                                <div style="font-weight: 600; color: #333738; font-size: 1.1rem; letter-spacing: 0.5px;">CI/CD</div>
                             </div>
                         </div>
                     </section>
-                    
-                    <!-- Back to Top Button (for mobile) -->
-                    <div class="hide-on-med-and-up center" style="margin: 2rem 0;">
-                        <a href="#" class="btn waves-effect waves-light back-to-top-mobile" style="background-color: #b18742;">
-                            <i class="material-icons left">arrow_upward</i>Back to Top
-                        </a>
+
+                    <!-- Soft Skills Section -->
+                    <section class="section scrollspy" id="soft-skills"
+                        style="background-color: #f8f9fa; padding: 2rem; border-radius: 8px; margin: 1.5rem 0; border: 1px solid #b4b5be;">
+                        <h4 class="center" style="color: #635b6c; margin-bottom: 2rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;">Soft Skills</h4>
+                        <div
+                            style="display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 1rem; width: 100%;">
+                            <div
+                                style="background: white; padding: 1.5rem; border-radius: 8px; text-align: center; border: 1px solid #b4b5be; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(180, 181, 190, 0.1);">
+                                <i class="fas fa-comments"
+                                    style="font-size: 2.5rem; color: #b18742; margin-bottom: 1rem;"></i>
+                                <div style="font-weight: 600; color: #333738; font-size: 1.1rem; letter-spacing: 0.5px;">Communication</div>
+                            </div>
+                            <div
+                                style="background: white; padding: 1.5rem; border-radius: 8px; text-align: center; border: 1px solid #b4b5be; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(180, 181, 190, 0.1);">
+                                <i class="fas fa-users"
+                                    style="font-size: 2.5rem; color: #b18742; margin-bottom: 1rem;"></i>
+                                <div style="font-weight: 600; color: #333738; font-size: 1.1rem; letter-spacing: 0.5px;">Teamwork</div>
+                            </div>
+                            <div
+                                style="background: white; padding: 1.5rem; border-radius: 8px; text-align: center; border: 1px solid #b4b5be; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(180, 181, 190, 0.1);">
+                                <i class="fas fa-lightbulb"
+                                    style="font-size: 2.5rem; color: #b18742; margin-bottom: 1rem;"></i>
+                                <div style="font-weight: 600; color: #333738; font-size: 1.1rem; letter-spacing: 0.5px;">Problem Solving</div>
+                            </div>
+                            <div
+                                style="background: white; padding: 1.5rem; border-radius: 8px; text-align: center; border: 1px solid #b4b5be; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(180, 181, 190, 0.1);">
+                                <i class="fas fa-clock"
+                                    style="font-size: 2.5rem; color: #b18742; margin-bottom: 1rem;"></i>
+                                <div style="font-weight: 600; color: #333738; font-size: 1.1rem; letter-spacing: 0.5px;">Time Management</div>
+                            </div>
+                            <div
+                                style="background: white; padding: 1.5rem; border-radius: 8px; text-align: center; border: 1px solid #b4b5be; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(180, 181, 190, 0.1);">
+                                <i class="fas fa-exchange-alt"
+                                    style="font-size: 2.5rem; color: #b18742; margin-bottom: 1rem;"></i>
+                                <div style="font-weight: 600; color: #333738; font-size: 1.1rem; letter-spacing: 0.5px;">Adaptability</div>
+                            </div>
+                            <div
+                                style="background: white; padding: 1.5rem; border-radius: 8px; text-align: center; border: 1px solid #b4b5be; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(180, 181, 190, 0.1);">
+                                <i class="fas fa-handshake"
+                                    style="font-size: 2.5rem; color: #b18742; margin-bottom: 1rem;"></i>
+                                <div style="font-weight: 600; color: #333738; font-size: 1.1rem; letter-spacing: 0.5px;">Leadership</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Bottom Scroll Indicator -->
+                    <div class="center-align" style="margin: 2rem 0; padding: 1rem; color: #b18742; font-weight: 500; letter-spacing: 1px;">
+                        <span>You've reached the top</span>
+                        <div style="margin-top: 0.5rem;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg);">
+                                <path d="M19 9L12 16L5 9" stroke="#b18742" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
                     </div>
-                    
-                </div> <!-- End of right column -->
-            </div> <!-- End of row -->
-        </div> <!-- End of container -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Back to Top Button (for mobile) -->
+    <div class="hide-on-med-and-up center" style="margin: 2rem 0;">
+        <a href="#" class="btn waves-effect waves-light back-to-top-mobile" style="background-color: #b18742;">
+            <i class="material-icons left">arrow_upward</i>Back to Top
+        </a>
+    </div>
+
+    </div> <!-- End of right column -->
+    </div> <!-- End of row -->
+    </div> <!-- End of container -->
     </section> <!-- End of main section -->
 
     <!-- Footer -->
     <footer class="page-footer" style="background-color: #333738 !important;">
         <div class="container">
             <div class="row">
-                <div class="col s12 m6">
-                    <h5>About My Work</h5>
-                    <p>I help businesses create meaningful connections through strategic marketing and compelling brand stories.</p>
+                <div class="col s12 m5">
+                        <div class="section" style="margin-top: auto; padding-bottom: 2rem; position: relative;">
+                            <a href="#contact" class="btn btn-large waves-effect waves-light"
+                                style="background-color: #b18742; margin: 0.5rem;">Contact Me</a>
+                            <div style="position: absolute; right: -40px; bottom: 20px; display: none;"
+                                class="hide-on-small-only">
+                                <div style="display: flex; flex-direction: column; align-items: center;">
+                                    <span
+                                        style="color: #b18742; font-size: 0.9rem; margin-bottom: 5px; writing-mode: vertical-rl; transform: rotate(180deg);">Scroll</span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" style="transform: rotate(90deg);">
+                                        <path d="M9 5L16 12L9 19" stroke="#b18742" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
                 </div>
                 <div class="col s12 m4 offset-m2">
-                    <h5>Connect With Me</h5>
+                    <h5>Connect Via:</h5>
                     <ul>
                         <li><a href="#!" class="white-text"><i class="material-icons tiny">link</i> LinkedIn</a></li>
-                        <li><a href="#!" class="white-text"><i class="material-icons tiny">link</i> Twitter</a></li>
-                        <li><a href="#!" class="white-text"><i class="material-icons tiny">link</i> Dribbble</a></li>
                     </ul>
                 </div>
             </div>
@@ -199,7 +271,8 @@
     </footer>
 
     <!-- Back to Top Button -->
-    <a href="#" id="back-to-top" class="btn-floating btn-large waves-effect waves-light" style="position: fixed; bottom: 20px; right: 20px; background-color: #b18742; display: none; z-index: 1000;">
+    <a href="#" id="back-to-top" class="btn-floating btn-large waves-effect waves-light"
+        style="position: fixed; bottom: 20px; right: 20px; background-color: #b18742; display: none; z-index: 1000;">
         <i class="material-icons">arrow_upward</i>
     </a>
 
@@ -208,48 +281,71 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
         // Back to Top Button
-        $(window).scroll(function() {
+        $(window).scroll(function () {
             if ($(this).scrollTop() > 300) {
-                $('#back-to-top').fadeIn();
+                $('#back-to-top, .back-to-top-mobile').fadeIn();
             } else {
-                $('#back-to-top').fadeOut();
+                $('#back-to-top, .back-to-top-mobile').fadeOut();
             }
         });
 
-        $('#back-to-top').click(function(e) {
+        // Smooth scroll to top for both desktop and mobile buttons
+        $('.back-to-top-mobile, #back-to-top').on('click', function(e) {
             e.preventDefault();
-            $('html, body').animate({scrollTop: 0}, 800);
+            $('html, body').animate({
+                scrollTop: $('#main-navbar').offset().top
+            }, 800);
             return false;
         });
     </script>
     <script src="js/script.js"></script>
-    
+
     <style>
+        /* Hide scrollbar but keep functionality */
+        #right-column::-webkit-scrollbar {
+            display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+        }
+        #right-column {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+
+        /* Make right column full height */
+        #right-column {
+            height: 100vh !important;
+            max-height: 100% !important;
+        }
+
         /* Responsive adjustments */
         @media only screen and (max-width: 992px) {
             #home .row.valign-wrapper {
                 display: block;
             }
+
             #home .col.m5 {
                 position: relative;
                 height: auto !important;
                 order: 1;
                 padding: 2rem !important;
             }
+
             #right-column {
                 position: relative;
-                max-height: 60vh !important;
+                height: auto !important;
+                max-height: 50vh !important;
                 overflow-y: auto;
                 order: 2;
                 padding: 2rem !important;
                 border-left: none !important;
-                border-top: 1px solid rgba(0,0,0,0.1);
+                border-top: 1px solid rgba(0, 0, 0, 0.1);
                 margin-top: 2rem;
             }
+
             .scroll-indicator {
                 display: none !important;
             }
         }
     </style>
 </body>
+
 </html>
