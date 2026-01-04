@@ -38,31 +38,45 @@
 
     <!-- Main Content Section -->
     <section id="home" class="section"
-        style="min-height: calc(100vh - 128px - 200px); padding: 0;">
+        style="min-height: calc(100vh - 128px - 200px); padding: 2rem 0;">
         <div class="container" style="width: 100%;">
             <div class="row" style="margin: 0; height: 100%;">
                 <!-- Left Column - Fixed -->
                 <div id="left-column" class="col s12 m5" style="height: 100%;">
                     <div class=""
                         style="padding: 2rem; position: sticky; top: 0; display: flex; flex-direction: column; padding-top: 2rem;">
-                        <p style="color: #333738; margin: 0 0 0.5rem 0; text-align: left; width: 100%; font-size: 1.1rem;">Hi, my nickname is:</p>
-                        <h1 style="margin: 0 0 0.8rem 0; line-height: 1.2;">Nidjo</h1>
+                        <div style="background: linear-gradient(135deg, rgba(248, 249, 250, 0.5), rgba(248, 249, 250, 0.3)); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); padding: 1rem; border-radius: 6px; border: 1px solid rgba(255, 255, 255, 0.3); margin-bottom: 0.5rem;">
+                            <p id="intro-text" style="color: #333738; margin: 0 0 0.5rem 0; text-align: left; width: 100%; font-size: 1.1rem; letter-spacing: 0.3px; background: none; padding: 0; border: none; border-radius: 0;">Hi, I am</p>
+                            <h1 id="nidjo-text" style="margin: 0; line-height: 1.2; letter-spacing: 0.3px; font-weight: 700; background: none; padding: 0; border: none; border-radius: 0;">Nidjo</h1>
+                        </div>
                         <p></p>
-                        <h5 id="description-text" class="light" style="color: #635b6c; margin: 0 0 1.5rem 0; font-size: 1.2rem; line-height: 1.4;">I am a professional Automotive Testing Engineer</h5>
-                        <p style="line-height: 1.6;">I'm passionate about learning Web Development and building application logic! I am currently working on my Django web application. More info to be provided soon.</p>
+                        <h5 id="description-text" class="light" style="color: #635b6c; margin: 0 0 1.5rem 0; font-size: 1.5rem; font-weight: 600; line-height: 1.4; background: linear-gradient(135deg, rgba(248, 249, 250, 0.5), rgba(248, 249, 250, 0.3)); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); padding: 1rem; border-radius: 6px; letter-spacing: 0.3px; border: 1px solid rgba(255, 255, 255, 0.3);">I am a Web Developer!</h5>
+                        <p id="about-text" style="line-height: 1.6; margin-top: 1rem; font-size: 1.1rem; font-weight: 500; background: linear-gradient(135deg, rgba(248, 249, 250, 0.5), rgba(248, 249, 250, 0.3)); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); padding: 1rem; border-radius: 6px; letter-spacing: 0.3px; border: 1px solid rgba(255, 255, 255, 0.3);">I'm passionate about learning Web Development and building application logic!<br><br>I am currently working on my Django web application.<br><br>More info to be provided soon.</p>
                     </div>
                 </div>
 
                 <!-- Right Column - Scrollable Content -->
                 <div id="right-column" class="col s12 m7"
-                    style="height: calc(100vh - 128px); max-height: 100vh; overflow-y: auto; padding: 0 2rem 2rem; box-sizing: border-box; -webkit-overflow-scrolling: touch; position: relative; order: 2; box-shadow: -2px 0 5px rgba(0,0,0,0.1);">
+                    style="height: calc(100vh - 128px); max-height: 100vh; overflow-y: auto; padding: 0 2rem 2rem; box-sizing: border-box; -webkit-overflow-scrolling: touch; position: relative; order: 2; box-shadow: -2px 0 5px rgba(0,0,0,0.1); border: 2px solid rgba(99, 91, 108, 0.3); border-radius: 8px; outline: 1px solid rgba(99, 91, 108, 0.2); outline-offset: 2px;">
                     <!-- Scroll Indicator -->
                     <div
-                        style="position: absolute; top: 1rem; left: 50%; transform: translateX(-50%); z-index: 1; background: rgba(255,255,255,0.8); padding: 0.5rem 1rem; border-radius: 20px; display: flex; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                        <span style="color: #b18742; margin-right: 8px; font-size: 0.9rem;">Scroll down</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 9L12 16L5 9" stroke="#b18742" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
+                        style="position: absolute; top: 1rem; left: 50%; transform: translateX(-50%); z-index: 1; background: rgba(255,255,255,0.9); padding: 0.5rem; border-radius: 8px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.15); width: 120px; height: 48px;">
+                        <svg viewBox="0 0 100 24" width="100%" height="48" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                          <defs>
+                            <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                              <stop offset="0%" style="stop-color:#e0e0e0;stop-opacity:1" />
+                              <stop offset="50%" style="stop-color:#a0a0a0;stop-opacity:1" />
+                              <stop offset="100%" style="stop-color:#707070;stop-opacity:1" />
+                            </linearGradient>
+                            <filter id="glow">
+                              <feGaussianBlur stdDeviation="0.8" result="coloredBlur"/>
+                              <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                              </feMerge>
+                            </filter>
+                          </defs>
+                          <path d="M15 6 Q50 22 85 6 L50 20 Z" fill="url(#arrowGradient)" opacity="0.9" stroke="#505050" stroke-width="1.5" filter="url(#glow)"/>
                         </svg>
                     </div>
                     <!-- Profile Image -->
@@ -143,12 +157,6 @@
                                     style="font-size: 2.5rem; color: #336791; margin-bottom: 1rem;"></i>
                                 <div style="font-weight: 600; color: #333738; font-size: 1.1rem; letter-spacing: 0.5px;">RDB</div>
                             </div>
-                            <div
-                                style="background: white; padding: 1.5rem; border-radius: 8px; text-align: center; border: 1px solid #b4b5be; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(180, 181, 190, 0.1);">
-                                <i class="fab fa-aws"
-                                    style="font-size: 2.5rem; color: #ff9900; margin-bottom: 1rem;"></i>
-                                <div style="font-weight: 600; color: #333738; font-size: 1.1rem; letter-spacing: 0.5px;">AWS</div>
-                            </div>
                         </div>
                     </section>
 
@@ -196,16 +204,6 @@
                             </div>
                         </div>
                     </section>
-
-                    <!-- Bottom Scroll Indicator -->
-                    <div class="center-align" style="margin: 0.25rem 0 2rem; position: relative;">
-                        <div style="background: rgba(255,255,255,0.8); padding: 0.5rem 1.5rem; border-radius: 20px; display: inline-flex; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                            <span style="color: #b18742; margin-right: 8px; font-size: 0.9rem; font-weight: 500; letter-spacing: 1px;">Scroll back to top</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg);">
-                                <path d="M19 9L12 16L5 9" stroke="#b18742" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -256,33 +254,10 @@
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <a href="#" id="back-to-top" class="btn-floating btn-large waves-effect waves-light"
-        style="position: fixed; bottom: 20px; right: 20px; background-color: #b18742; display: none; z-index: 1000;">
-        <i class="material-icons">arrow_upward</i>
-    </a>
-
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
-        // Back to Top Button
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 300) {
-                $('#back-to-top, .back-to-top-mobile').fadeIn();
-            } else {
-                $('#back-to-top, .back-to-top-mobile').fadeOut();
-            }
-        });
-
-        // Smooth scroll to top for both desktop and mobile buttons
-        $('.back-to-top-mobile, #back-to-top').on('click', function(e) {
-            e.preventDefault();
-            $('html, body').animate({
-                scrollTop: $('#main-navbar').offset().top
-            }, 800);
-            return false;
-        });
     </script>
     <script src="js/script.js"></script>
 
